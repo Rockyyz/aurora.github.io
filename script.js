@@ -56,11 +56,14 @@ function movePlayer(dx, dy) {
         player.y += dy;
         draw();
     }
+    if (player.x === exit.x && player.y === exit.y) {
+        alert('Você venceu!');
+    }    
 }
-
 function draw() {
     drawMaze();
     drawPlayer();
+    drawExit();
 }
 
 document.addEventListener('keydown', (e) => {
@@ -78,5 +81,12 @@ document.addEventListener('keydown', (e) => {
             movePlayer(1, 0);
             break;
     }
+
+document.getElementById('up').addEventListener('click', () => movePlayer(0, -1));
+document.getElementById('down').addEventListener('click', () => movePlayer(0, 1));
+document.getElementById('left').addEventListener('click', () => movePlayer(-1, 0));
+document.getElementById('right').addEventListener('click', () => movePlayer(1, 0));
+
+
 });
 draw();
