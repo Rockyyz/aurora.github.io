@@ -81,13 +81,16 @@ function draw() {
 
 draw();
 
-document.getElementById('up').addEventListener('click', () => movePlayer(0, -1));
-document.getElementById('up').addEventListener('touchstart', () => movePlayer(0, -1));
-document.getElementById('down').addEventListener('click', () => movePlayer(0, 1));
-document.getElementById('down').addEventListener('touchstart', () => movePlayer(0, 1));
-document.getElementById('left').addEventListener('click', () => movePlayer(-1, 0));
-document.getElementById('left').addEventListener('touchstart', () => movePlayer(-1, 0));
-document.getElementById('right').addEventListener('click', () => movePlayer(1, 0));
-document.getElementById('right').addEventListener('touchstart', () => movePlayer(1, 0));
+function handleMove(dx, dy, event) {
+    event.preventDefault();
+    movePlayer(dx, dy);
+}
 
-
+document.getElementById('up').addEventListener('click', (event) => handleMove(0, -1, event));
+document.getElementById('up').addEventListener('touchstart', (event) => handleMove(0, -1, event));
+document.getElementById('down').addEventListener('click', (event) => handleMove(0, 1, event));
+document.getElementById('down').addEventListener('touchstart', (event) => handleMove(0, 1, event));
+document.getElementById('left').addEventListener('click', (event) => handleMove(-1, 0, event));
+document.getElementById('left').addEventListener('touchstart', (event) => handleMove(-1, 0, event));
+document.getElementById('right').addEventListener('click', (event) => handleMove(1, 0, event));
+document.getElementById('right').addEventListener('touchstart', (event) => handleMove(1, 0, event));
