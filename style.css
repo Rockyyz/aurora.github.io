@@ -9,6 +9,18 @@ body {
     background-color: #f0f0f0;
 }
 
+h1 {
+    margin: 2px 0;
+    font-size: 3em;
+}
+
+#subtitle {
+    margin: 2px 0 2px 0;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #04880b;
+}
+
 #game-container {
     display: flex;
     justify-content: center;
