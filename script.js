@@ -79,21 +79,7 @@ function draw() {
     drawExit();
 }
 
-document.addEventListener('keydown', (e) => {
-    switch (e.key) {
-        case 'ArrowUp':
-            movePlayer(0, -1);
-            break;
-        case 'ArrowDown':
-            movePlayer(0, 1);
-            break;
-        case 'ArrowLeft':
-            movePlayer(-1, 0);
-            break;
-        case 'ArrowRight':
-            movePlayer(1, 0);
-            break;
-    }
+draw();
 
 document.getElementById('up').addEventListener('click', () => movePlayer(0, -1));
 document.getElementById('up').addEventListener('touchstart', () => movePlayer(0, -1));
@@ -105,5 +91,3 @@ document.getElementById('right').addEventListener('click', () => movePlayer(1, 0
 document.getElementById('right').addEventListener('touchstart', () => movePlayer(1, 0));
 
 
-});
-draw();
