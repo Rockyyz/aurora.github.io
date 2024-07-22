@@ -5,8 +5,20 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
     background-color: #f0f0f0;
+}
+
+h1 {
+    margin: 2px 0;
+    font-size: 3em;
+}
+
+#subtitle {
+    margin: 2px 0 2px 0;
+    font-size: 3em;
+    font-family: 'Courier New', Courier, monospace;
+    color: #04880b;
 }
 
 #game-container {
@@ -21,12 +33,12 @@ canvas {
     border: 1px solid #000;
     width: 100%;
     height: auto;
-    max-width: 800px;
-    max-height: 800px;
+    max-width: 350px;
+    max-height: 350px;
 }
 
 #controls {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -39,7 +51,7 @@ canvas {
 }
 
 #controls button {
-    margin: 5px;
+    margin: 1px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 20px;
 }
